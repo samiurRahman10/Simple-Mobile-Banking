@@ -37,6 +37,12 @@ document.getElementById('Withdraw-money-btn').addEventListener('click', function
 
 })
 
+// Log Out Feature
+document.getElementById('logOut').addEventListener('click', function () {
+
+    window.location.href="./index.html";
+})
+
 // Toggle Feature
 document.getElementById('add-money-card').addEventListener('click', function () {
     document.getElementById('money-add-form').style.display = 'block';
