@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 
-<body class="bg-[#f4f5f7]">
+<body class="bg-[#f4f5f7] min-h-[100vh]">
     <div class="max-w-lg mx-auto bg-white rounded-b-lg">
         <!-- Nav Section -->
         <div class="border-b border-gray-300">
@@ -41,17 +41,20 @@
         <!-- Welcome Card -->
         <div class="grid grid-cols-3 gap-4 p-6">
             <!-- Add Money Card -->
-            <div id="add-money-card" class="h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
+            <div id="add-money-card"
+                class="card-btn h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
                 <img src="./assets/wallet1.png" alt="">
                 <p class="text-center mt-3 text-[#666768]">Add Money</p>
             </div>
             <!-- Cash Out Card -->
-            <div id="withdraw-money-card" class="h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
+            <div id="withdraw-money-card"
+                class="card-btn h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
                 <img src="./assets/send1.png" alt="">
                 <p class="text-center mt-3 text-[#666768]">Cash Out</p>
             </div>
             <!-- Transfer Money Card -->
-            <div id="transfer-money-card" class="h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
+            <div id="transfer-money-card"
+                class="card-btn h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
                 <img src="./assets/money1.png" alt="">
                 <p class="text-center mt-3 text-[#666768]">Transfer Money</p>
             </div>
@@ -66,7 +69,8 @@
                 <p class="text-center mt-3 text-[#666768]">Pay Bill</p>
             </div>
             <!-- Transaction Card -->
-            <div class="h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
+            <div id="transaction-money-card"
+                class="h-24 border flex flex-col justify-center items-center border-gray-300 rounded-xl">
                 <img src="./assets/transaction1.png" alt="">
                 <p class="text-center mt-3 text-[#666768]">Transaction</p>
             </div>
@@ -74,7 +78,7 @@
     </div>
 
     <!--All Form Section -->
-    <div class="max-w-lg mx-auto">
+    <section class="max-w-lg mx-auto">
         <!-- Add Money -->
         <div class="forms" id="money-add-form">
             <h1 class="font-bold my-5">Add Money</h1>
@@ -137,7 +141,7 @@
         </div>
 
         <!-- Transfer Money -->
-          <div class="hidden forms" id="money-transfer-form">
+        <div class="hidden forms" id="money-transfer-form">
             <h1 class="font-bold my-5">Transfer Money</h1>
             <div class="bg-white rounded-2xl m-3">
                 <form class="p-6">
@@ -156,12 +160,23 @@
                         <input type="text" placeholder="Enter 4 digit Pin Number"
                             class="input w-full rounded-3xl bg-[#f4f5f7] my-2 " id="transfer-pin" />
                     </div>
-                    <button class="btn bg-[#0874F2] text-white mt-5 w-full rounded-3xl" id="transfer-money-btn">Send Now</button>
+                    <button class="btn bg-[#0874F2] text-white mt-5 w-full rounded-3xl" id="transfer-money-btn">Send
+                        Now</button>
                 </form>
             </div>
         </div>
-
-    </div>
+        <!-- Transaction Section -->
+        <div class="hidden forms" id="money-transaction-form">
+            <div class="flex items-center justify-between">
+                <h1 class="font-bold my-5">Transfer Money</h1>
+                <p class="text-[#666768]">View All</p>
+            </div>
+            <!-- Transaction Content -->
+            <div id="transaction-money-content-container">
+               
+            </div>
+        </div>
+    </section>
     <script src="./script/addMoney.js"></script>
 </body>
 
